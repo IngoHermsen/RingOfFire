@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
   cardPicked = false;
-  game: Game
+  // game: Game
 
   takeCard() {
     this.cardPicked = true;
