@@ -1,0 +1,7 @@
+<div class="gameArea">
+    <div class="card-stack">
+        <img *ngFor="let c of [0,1,2,3,4]; index as i;" [ngStyle]="{'right.px': i * 5}" class="card" src="/assets/img/cards/card_cover.png" alt=>
+        <img (click)="takeCard()" [ngStyle]="{'right.px': 40}" class="card top-card" src="/assets/img/cards/card_cover.png" alt=>
+        <img *ngIf="cardPicked" [ngStyle]="{'right.px': 40}" [class.pick-card]="cardPicked" class="card" src="/assets/img/cards/ace_1.png" alt=>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+.gameArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.card-stack {
+    position: relative;
+
+    .card {
+        position: absolute;
+        width: 120px;
+    }
+
+    .top-card {
+        transition: transform 150ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1) translateY(-10px);
+        }
+    }
+}
+
+.pick-card {
+    
+    animation: pick-card-animation 1.5s ease-in-out;
+    transform: scale(1) translateX(250px) translateY(-140px) rotate(-10deg);
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1.5);
+
+    }
+
+    100% {
+        transform: scale(1) translateX(250px) translateY(-140px) rotate(-10deg);
+    }
+
+}
